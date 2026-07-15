@@ -56,7 +56,12 @@
       "allowedVersions": {
         "tsconfck>typescript": "6"
       }
-    }
+    },
+    "onlyBuiltDependencies": [
+      "esbuild",
+      "sharp",
+      "workerd"
+    ]
   },
   "devDependencies": {
     "@astrojs/check": "^0.9.9",
