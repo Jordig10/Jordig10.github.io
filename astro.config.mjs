@@ -22,9 +22,7 @@ const prettyCodeOptions = {
 // https://astro.build/config
 export default defineConfig({
   site: CONFIG.site.url,
-  output: 'server',
-
-  adapter: cloudflare(),
+  output: 'static',
 
   vite: {
     plugins: [tailwindcss()],
