@@ -52,7 +52,7 @@ export const CONFIG = {
     radius: "0.625rem",
 
     light: {
-      background: "oklch(1 0 0)",
+      background: "oklch(0.975 0 0)",
       foreground: "oklch(0.145 0 0)",
       card: "oklch(1 0 0)",
       cardForeground: "oklch(0.145 0 0)",
