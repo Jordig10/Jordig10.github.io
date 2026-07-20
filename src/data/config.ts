@@ -4,8 +4,8 @@ export const CONFIG = {
   // ---------------------------------------------------------------------------
   site: {
     url: "https://jordig10.github.io",
-    locale: "en_US",
-    twitterHandle: "@alexmercer_dev",
+    locale: "es_ES",
+    twitterHandle: "",
   },
 
   // ---------------------------------------------------------------------------
