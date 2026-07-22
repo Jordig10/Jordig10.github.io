@@ -70,7 +70,7 @@ export function ProjectCard({
           : undefined
       }
       className={cn(
-        "flex flex-col h-full border border-border rounded-xl overflow-hidden hover:ring-2 cursor-pointer hover:ring-muted transition-all duration-200 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring",
+        "flex flex-col h-full border border-border rounded-xl overflow-hidden hover:ring-2 cursor-pointer hover:ring-link/50 transition-all duration-200 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-link",
         className
       )}
     >

@@ -138,6 +138,11 @@
     @apply bg-background text-foreground;
   }
 
+  ::selection {
+    background-color: var(--link);
+    color: var(--background);
+  }
+
   /* Shiki dual theme support */
   .shiki,
   .shiki span {

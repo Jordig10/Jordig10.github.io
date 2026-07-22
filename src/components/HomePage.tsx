@@ -71,7 +71,7 @@ function buildSections(t: (typeof i18n)["es"]): Record<string, React.ReactNode> 
                     <div className="flex-1 min-w-0 flex flex-col gap-0.5">
                       <div className="font-semibold leading-none flex items-center gap-2">
                         {education.school}
-                        <ArrowUpRight className="h-3.5 w-3.5 text-muted-foreground opacity-0 -translate-x-2 group-hover:opacity-100 group-hover:translate-x-0 transition-all duration-200" aria-hidden />
+                        <ArrowUpRight className="h-3.5 w-3.5 text-link opacity-0 -translate-x-2 group-hover:opacity-100 group-hover:translate-x-0 transition-all duration-200" aria-hidden />
                       </div>
                       <div className="font-sans text-sm text-muted-foreground">
                         {t.education[index]?.degree}
@@ -97,7 +97,7 @@ function buildSections(t: (typeof i18n)["es"]): Record<string, React.ReactNode> 
           {DATA.skills.map((group, groupId) => (
             <div key={group.category} className="flex min-h-0 flex-col gap-y-2">
               <BlurFade delay={BLUR_FADE_DELAY * 10 + groupId * 0.05}>
-                <h3 className="text-sm font-medium text-muted-foreground">
+                <h3 className="text-sm font-medium text-link">
                   {t.skillCategories[group.category]}
                 </h3>
               </BlurFade>
@@ -177,7 +177,7 @@ export default function HomePage() {
                       "radial-gradient(circle, var(--glow) 0%, transparent 70%)",
                   }}
                 />
-                <Avatar className="size-24 md:size-32 border rounded-full shadow-lg ring-4 ring-muted">
+                <Avatar className="size-24 md:size-32 border rounded-full shadow-lg ring-4 ring-link/30">
                   <AvatarImage alt={DATA.name} src={DATA.avatarUrl} />
                   <AvatarFallback>{DATA.initials}</AvatarFallback>
                 </Avatar>

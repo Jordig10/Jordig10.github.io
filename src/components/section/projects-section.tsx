@@ -17,8 +17,8 @@ export default function ProjectsSection() {
                             className="flex-1 h-px bg-linear-to-r from-transparent from-5% via-border via-95% to-transparent"
 
                         />
-                        <div className="border bg-primary z-10 rounded-xl px-4 py-1">
-                            <span className="text-background text-sm font-medium">{t.sections.projects.label}</span>
+                        <div className="border border-link/40 bg-link/10 z-10 rounded-xl px-4 py-1">
+                            <span className="text-link text-sm font-medium">{t.sections.projects.label}</span>
                         </div>
                         <div
                             className="flex-1 h-px bg-linear-to-l from-transparent from-5% via-border via-95% to-transparent"

@@ -6,8 +6,8 @@ export default function ContactSection() {
 
   return (
     <div className="border rounded-xl p-10 relative">
-      <div className="absolute -top-4 border bg-primary z-10 rounded-xl px-4 py-1 left-1/2 -translate-x-1/2">
-        <span className="text-background text-sm font-medium">{t.sections.contact.label}</span>
+      <div className="absolute -top-4 border border-link/40 bg-link/10 z-10 rounded-xl px-4 py-1 left-1/2 -translate-x-1/2">
+        <span className="text-link text-sm font-medium">{t.sections.contact.label}</span>
       </div>
       <div className="absolute inset-0 top-0 left-0 right-0 h-1/2 rounded-xl overflow-hidden">
         <FlickeringGrid
