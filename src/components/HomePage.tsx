@@ -168,10 +168,20 @@ export default function HomePage() {
         <div className="w-full space-y-8">
           <div className="gap-2 gap-y-6 flex flex-col items-center">
             <BlurFade delay={BLUR_FADE_DELAY}>
-              <Avatar className="size-24 md:size-32 border rounded-full shadow-lg ring-4 ring-muted">
-                <AvatarImage alt={DATA.name} src={DATA.avatarUrl} />
-                <AvatarFallback>{DATA.initials}</AvatarFallback>
-              </Avatar>
+              <div className="relative">
+                <div
+                  aria-hidden
+                  className="absolute inset-0 -z-10 scale-[2.2] rounded-full opacity-70 blur-2xl"
+                  style={{
+                    background:
+                      "radial-gradient(circle, var(--glow) 0%, transparent 70%)",
+                  }}
+                />
+                <Avatar className="size-24 md:size-32 border rounded-full shadow-lg ring-4 ring-muted">
+                  <AvatarImage alt={DATA.name} src={DATA.avatarUrl} />
+                  <AvatarFallback>{DATA.initials}</AvatarFallback>
+                </Avatar>
+              </div>
             </BlurFade>
             <div className="gap-2 flex flex-col items-center">
               <BlurFadeText

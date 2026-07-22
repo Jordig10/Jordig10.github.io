@@ -100,7 +100,7 @@ export function ProjectCard({
                 onClick={(e: React.MouseEvent) => e.stopPropagation()}
               >
                 <Badge
-                  className="flex items-center gap-1.5 text-xs bg-black text-white hover:bg-black/90"
+                  className="flex items-center gap-1.5 text-xs bg-primary text-primary-foreground hover:bg-primary/90"
                   variant="default"
                 >
                   {link.icon}
