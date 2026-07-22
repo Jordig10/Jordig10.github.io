@@ -3,8 +3,8 @@ import React, { useCallback, useEffect, useMemo, useRef, useState } from "react"
 import { cn } from "@/lib/utils";
 
 const CHARSET = "01{}[]<>/;#$%&+=~^_".split("");
-const FONT_SIZE = 20;
-const COLUMN_WIDTH = 34;
+const FONT_SIZE = 17;
+const COLUMN_WIDTH = 30;
 // Fracción de la altura, desde arriba, donde empieza a desvanecerse el efecto.
 const FADE_START = 0.82;
 

@@ -6,8 +6,12 @@ export default function ContactSection() {
 
   return (
     <div className="flex flex-col items-center gap-4">
-      <div className="border border-link/40 bg-link/10 z-10 rounded-xl px-4 py-1">
-        <span className="text-link text-sm font-medium">{t.sections.contact.label}</span>
+      <div className="flex items-center w-full">
+        <div className="flex-1 h-px bg-linear-to-r from-transparent from-5% via-border via-95% to-transparent" />
+        <div className="border border-link/40 bg-link/10 z-10 rounded-xl px-4 py-1">
+          <span className="text-link text-sm font-medium">{t.sections.contact.label}</span>
+        </div>
+        <div className="flex-1 h-px bg-linear-to-l from-transparent from-5% via-border via-95% to-transparent" />
       </div>
       <div className="w-full border rounded-xl p-10 relative overflow-hidden">
         <div className="absolute inset-0 top-0 left-0 right-0 h-1/2">
