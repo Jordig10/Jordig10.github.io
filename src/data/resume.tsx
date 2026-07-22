@@ -2,7 +2,6 @@ import { Icons } from "@/components/icons";
 import { House } from "lucide-react";
 import { Python } from "@/components/ui/svgs/python";
 import { Java } from "@/components/ui/svgs/java";
-import { C } from "@/components/ui/svgs/c";
 import { Git } from "@/components/ui/svgs/git";
 import { Linux } from "@/components/ui/svgs/linux";
 import { OpenVPN } from "@/components/ui/svgs/openvpn";
@@ -69,7 +68,7 @@ export const DATA = {
       items: [
         { name: "Python", icon: Python },
         { name: "Java", icon: Java },
-        { name: "C", icon: C },
+        { name: "C", iconUrl: "https://upload.wikimedia.org/wikipedia/commons/1/19/C_Logo.png" },
       ],
     },
     {

@@ -53,6 +53,10 @@ export const CONFIG = {
 
     light: {
       background: "oklch(0.975 0 0)",
+      // Degradado diagonal de fondo de página, distinto del "background"
+      // plano que usan las tarjetas/chips.
+      gradientFrom: "#ffffff",
+      gradientTo: "#eceafc",
       foreground: "oklch(0.145 0 0)",
       card: "oklch(1 0 0)",
       cardForeground: "oklch(0.145 0 0)",
@@ -67,13 +71,17 @@ export const CONFIG = {
       accent: "oklch(0.97 0 0)",
       accentForeground: "oklch(0.205 0 0)",
       destructive: "oklch(0.577 0.245 27.325)",
-      border: "oklch(0.922 0 0)",
-      input: "oklch(0.922 0 0)",
+      // Contorno con un toque del índigo del modo oscuro (en vez de gris puro).
+      border: "oklch(0.88 0.03 290)",
+      input: "oklch(0.88 0.03 290)",
       ring: "oklch(0.708 0 0)",
     },
 
     dark: {
       background: "oklch(0.18 0 0)",
+      // Degradado diagonal índigo/violeta de fondo de página.
+      gradientFrom: "#0a0a0f",
+      gradientTo: "#1e1b3a",
       foreground: "oklch(0.985 0 0)",
       card: "oklch(0.205 0 0)",
       cardForeground: "oklch(0.985 0 0)",
