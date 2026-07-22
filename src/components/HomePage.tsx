@@ -171,7 +171,7 @@ export default function HomePage() {
               <div className="relative">
                 <div
                   aria-hidden
-                  className="absolute inset-0 -z-10 scale-[2.2] rounded-full opacity-70 blur-2xl"
+                  className="absolute inset-0 -z-10 scale-125 rounded-full opacity-40 blur-xl"
                   style={{
                     background:
                       "radial-gradient(circle, var(--glow) 0%, transparent 70%)",

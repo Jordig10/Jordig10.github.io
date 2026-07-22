@@ -53,12 +53,10 @@ export const CONFIG = {
 
     light: {
       background: "oklch(0.975 0 0)",
-      // Degradado diagonal de fondo de página, distinto del "background"
-      // plano que usan las tarjetas/chips. gradientVia solo se aplica en
-      // modo oscuro (dark:via-gradient-via); en claro queda como fallback.
+      // Degradado horizontal de fondo de página (2 colores), distinto del
+      // "background" plano que usan las tarjetas/chips.
       gradientFrom: "#ffffff",
-      gradientVia: "#eceafc",
-      gradientTo: "#eceafc",
+      gradientTo: "#e6e1f5",
       // Resplandor suave detrás del avatar.
       glow: "#ddd6fe",
       foreground: "oklch(0.145 0 0)",
@@ -83,13 +81,10 @@ export const CONFIG = {
 
     dark: {
       background: "oklch(0.18 0 0)",
-      // Degradado diagonal de fondo de página: negro → índigo → un pequeño
-      // toque de blanco concentrado en la esquina inferior derecha (el
-      // "via" se posiciona al 75% para que el blanco solo ocupe el tramo
-      // final, ver body class en Layout.astro).
-      gradientFrom: "#0a0a0f",
-      gradientVia: "#1e1b3a",
-      gradientTo: "#f5f0ff",
+      // Degradado horizontal (izquierda → derecha), 2 colores: gris no muy
+      // oscuro → violeta/índigo, como en la referencia.
+      gradientFrom: "#38363f",
+      gradientTo: "#453a7a",
       // Resplandor suave detrás del avatar.
       glow: "#f5f0ff",
       foreground: "oklch(0.985 0 0)",

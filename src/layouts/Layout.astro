@@ -67,7 +67,6 @@ const { baseFontSize } = CONFIG.typography;
         --radius: ${radius};
         --background: ${light.background};
         --gradient-from: ${light.gradientFrom};
-        --gradient-via: ${light.gradientVia};
         --gradient-to: ${light.gradientTo};
         --glow: ${light.glow};
         --foreground: ${light.foreground};
@@ -91,7 +90,6 @@ const { baseFontSize } = CONFIG.typography;
       .dark {
         --background: ${dark.background};
         --gradient-from: ${dark.gradientFrom};
-        --gradient-via: ${dark.gradientVia};
         --gradient-to: ${dark.gradientTo};
         --glow: ${dark.glow};
         --foreground: ${dark.foreground};
@@ -146,7 +144,7 @@ const { baseFontSize } = CONFIG.typography;
     <meta name="twitter:description" content={description} />
     <meta name="twitter:image" content={ogImage} />
   </head>
-  <body class="min-h-screen bg-linear-to-br from-gradient-from to-gradient-to dark:via-gradient-via dark:via-75% bg-fixed font-sans antialiased relative">
+  <body class="min-h-screen bg-linear-to-r from-gradient-from to-gradient-to bg-fixed font-sans antialiased relative">
     <!-- FlickeringGrid header background - matches template exactly -->
     <div class="absolute inset-0 top-0 left-0 right-0 h-25 overflow-hidden z-0">
       <FlickeringGrid
