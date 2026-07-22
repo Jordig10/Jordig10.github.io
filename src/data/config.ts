@@ -53,10 +53,11 @@ export const CONFIG = {
 
     light: {
       background: "oklch(0.975 0 0)",
-      // Degradado horizontal de fondo de página (2 colores), distinto del
+      // Degradado horizontal de fondo de página: blanco → mismo violeta/
+      // índigo que el modo oscuro (dark.gradientTo), distinto del
       // "background" plano que usan las tarjetas/chips.
       gradientFrom: "#ffffff",
-      gradientTo: "#e6e1f5",
+      gradientTo: "#453a7a",
       // Resplandor suave detrás del avatar.
       glow: "#ddd6fe",
       foreground: "oklch(0.145 0 0)",
