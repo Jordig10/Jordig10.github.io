@@ -59,6 +59,8 @@ export const CONFIG = {
       gradientTo: "#e6e1f5",
       // Resplandor suave detrás del avatar.
       glow: "#ddd6fe",
+      // Color de los enlaces dentro del texto (violet-700, ~7:1 sobre blanco).
+      link: "#6d28d9",
       foreground: "oklch(0.145 0 0)",
       card: "oklch(1 0 0)",
       cardForeground: "oklch(0.145 0 0)",
@@ -87,6 +89,8 @@ export const CONFIG = {
       gradientTo: "#5c577a",
       // Resplandor suave detrás del avatar.
       glow: "#f5f0ff",
+      // Color de los enlaces dentro del texto (violet-300, ~8:1 sobre el degradado).
+      link: "#c4b5fd",
       foreground: "oklch(0.985 0 0)",
       card: "oklch(0.205 0 0)",
       cardForeground: "oklch(0.985 0 0)",
