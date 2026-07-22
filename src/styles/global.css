@@ -189,7 +189,7 @@
   }
 
   .prose a {
-    @apply text-link no-underline hover:text-link/80 transition-colors;
+    @apply text-link! no-underline! hover:text-link/80! transition-colors!;
   }
 
   .prose blockquote {
