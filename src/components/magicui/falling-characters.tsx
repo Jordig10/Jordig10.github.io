@@ -3,8 +3,8 @@ import React, { useCallback, useEffect, useMemo, useRef, useState } from "react"
 import { cn } from "@/lib/utils";
 
 const CHARSET = "01{}[]<>/;#$%&+=~^_".split("");
-const FONT_SIZE = 14;
-const COLUMN_WIDTH = 26;
+const FONT_SIZE = 20;
+const COLUMN_WIDTH = 34;
 // Fracción de la altura, desde arriba, donde empieza a desvanecerse el efecto.
 const FADE_START = 0.82;
 
@@ -98,12 +98,15 @@ export const FallingCharacters: React.FC<FallingCharactersProps> = ({
     let width = 0;
     let height = 0;
 
+    // Se mide contra el viewport (no el contenedor) porque esta capa es
+    // "fixed inset-0": es más fiable en móvil que clientWidth/clientHeight,
+    // que puede leerse antes de que el layout haya asentado del todo.
     const setupCanvas = () => {
-      width = container.clientWidth;
-      height = container.clientHeight;
+      width = window.innerWidth;
+      height = window.innerHeight;
       dpr = window.devicePixelRatio || 1;
-      canvas.width = width * dpr;
-      canvas.height = height * dpr;
+      canvas.width = Math.max(1, Math.round(width * dpr));
+      canvas.height = Math.max(1, Math.round(height * dpr));
       canvas.style.width = `${width}px`;
       canvas.style.height = `${height}px`;
 
@@ -120,7 +123,7 @@ export const FallingCharacters: React.FC<FallingCharactersProps> = ({
       lastTime = time;
 
       ctx.clearRect(0, 0, canvas.width, canvas.height);
-      ctx.font = `${FONT_SIZE * dpr}px var(--font-mono, monospace)`;
+      ctx.font = `${FONT_SIZE * dpr}px monospace`;
       ctx.textBaseline = "top";
 
       drops.forEach((drop, i) => {
@@ -153,8 +156,9 @@ export const FallingCharacters: React.FC<FallingCharactersProps> = ({
       animationFrameId = requestAnimationFrame(animate);
     };
 
-    const resizeObserver = new ResizeObserver(() => setupCanvas());
-    resizeObserver.observe(container);
+    const handleResize = () => setupCanvas();
+    window.addEventListener("resize", handleResize);
+    window.addEventListener("orientationchange", handleResize);
 
     const intersectionObserver = new IntersectionObserver(
       ([entry]) => setIsInView(entry.isIntersecting),
@@ -168,7 +172,8 @@ export const FallingCharacters: React.FC<FallingCharactersProps> = ({
 
     return () => {
       cancelAnimationFrame(animationFrameId);
-      resizeObserver.disconnect();
+      window.removeEventListener("resize", handleResize);
+      window.removeEventListener("orientationchange", handleResize);
       intersectionObserver.disconnect();
     };
   }, [rgbPrefix, maxOpacity, isInView]);

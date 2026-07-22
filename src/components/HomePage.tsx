@@ -12,6 +12,7 @@ import WorkSection from "@/components/section/work-section";
 import { ArrowUpRight } from "lucide-react";
 import { useLanguage } from "@/lib/use-language";
 import type { i18n } from "@/data/i18n";
+import { Terminal, TypingAnimation, AnimatedSpan } from "@/components/magicui/terminal";
 
 const BLUR_FADE_DELAY = 0.04;
 
@@ -196,6 +197,22 @@ export default function HomePage() {
                 text={t.hero.description}
               />
             </div>
+            <BlurFade delay={BLUR_FADE_DELAY * 2}>
+              <Terminal className="mt-2">
+                <TypingAnimation className="text-link">
+                  {`$ ${t.hero.terminal.whoami}`}
+                </TypingAnimation>
+                <AnimatedSpan delay={1200} className="text-muted-foreground">
+                  {t.hero.terminal.whoamiOutput}
+                </AnimatedSpan>
+                <TypingAnimation className="text-link" delay={1800}>
+                  {`$ ${t.hero.terminal.cat}`}
+                </TypingAnimation>
+                <AnimatedSpan delay={3400} className="text-muted-foreground">
+                  {t.hero.terminal.catOutput}
+                </AnimatedSpan>
+              </Terminal>
+            </BlurFade>
           </div>
         </div>
       </section>

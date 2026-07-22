@@ -8,6 +8,12 @@ export const i18n = {
       greeting: (firstName: string) => `Hola, soy ${firstName}`,
       description:
         "Estudiante de Ciberseguridad en ENTI-UB, con interés en la seguridad defensiva y el análisis de amenazas.",
+      terminal: {
+        whoami: "whoami",
+        whoamiOutput: "jordi.gomez",
+        cat: "cat intereses.txt",
+        catOutput: "Seguridad defensiva & análisis de amenazas",
+      },
     },
     summary:
       "Estudiante de Grado en Ciberseguridad en ENTI-UB con interés en la seguridad defensiva y el análisis de amenazas. Cuento con [formación](/#education) en programación, redes, seguridad y marco legal, complementada con [proyectos prácticos](/#projects) desarrollados de forma individual y en equipo. Enfocado en el aprendizaje continuo y la resolución de problemas, busco adquirir conocimientos y experiencia práctica en entornos reales.",
@@ -74,6 +80,12 @@ export const i18n = {
       greeting: (firstName: string) => `Hi, I'm ${firstName}`,
       description:
         "Cybersecurity student at ENTI-UB, interested in defensive security and threat analysis.",
+      terminal: {
+        whoami: "whoami",
+        whoamiOutput: "jordi.gomez",
+        cat: "cat interests.txt",
+        catOutput: "Defensive security & threat analysis",
+      },
     },
     summary:
       "I'm a Cybersecurity degree student at ENTI-UB, interested in defensive security and threat analysis. I have a background in [programming, networking, security and legal frameworks](/#education), complemented by [hands-on projects](/#projects) built both individually and in teams. Focused on continuous learning and problem-solving, I'm looking to gain knowledge and hands-on experience in real-world environments.",
