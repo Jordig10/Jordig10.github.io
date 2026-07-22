@@ -4,6 +4,7 @@ import { DATA } from "@/data/resume";
 import { CONFIG } from "@/data/config";
 import NavbarIsland from "@/components/NavbarIsland";
 import { FlickeringGrid } from "@/components/magicui/flickering-grid";
+import { FallingCharacters } from "@/components/magicui/falling-characters";
 
 interface Props {
   title?: string;
@@ -147,6 +148,11 @@ const { baseFontSize } = CONFIG.typography;
     <meta name="twitter:image" content={ogImage} />
   </head>
   <body class="min-h-screen bg-linear-to-r from-gradient-from to-gradient-to bg-fixed font-sans antialiased relative">
+    <!-- Falling characters ambient background, anchored to the viewport -->
+    <div class="fixed inset-0 z-0 pointer-events-none">
+      <FallingCharacters client:load maxOpacity={0.18} />
+    </div>
+
     <!-- FlickeringGrid header background - matches template exactly -->
     <div class="absolute inset-0 top-0 left-0 right-0 h-25 overflow-hidden z-0">
       <FlickeringGrid
