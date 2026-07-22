@@ -63,10 +63,10 @@ function buildSections(t: (typeof i18n)["es"]): Record<string, React.ReactNode> 
                       <img
                         src={education.logoUrl}
                         alt={education.school}
-                        className="size-8 md:size-10 p-1 border rounded-full shadow ring-2 ring-border overflow-hidden object-contain flex-none"
+                        className="size-8 md:size-10 p-1 border rounded-full shadow ring-1 ring-link/50 overflow-hidden object-contain flex-none"
                       />
                     ) : (
-                      <div className="size-8 md:size-10 p-1 border rounded-full shadow ring-2 ring-border bg-muted flex-none" />
+                      <div className="size-8 md:size-10 p-1 border rounded-full shadow ring-1 ring-link/50 bg-muted flex-none" />
                     )}
                     <div className="flex-1 min-w-0 flex flex-col gap-0.5">
                       <div className="font-semibold leading-none flex items-center gap-2">
@@ -177,7 +177,7 @@ export default function HomePage() {
                       "radial-gradient(circle, var(--glow) 0%, transparent 70%)",
                   }}
                 />
-                <Avatar className="size-24 md:size-32 border rounded-full shadow-lg ring-4 ring-link/30">
+                <Avatar className="size-24 md:size-32 border rounded-full shadow-lg ring-1 ring-link/50">
                   <AvatarImage alt={DATA.name} src={DATA.avatarUrl} />
                   <AvatarFallback>{DATA.initials}</AvatarFallback>
                 </Avatar>

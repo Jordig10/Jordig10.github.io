@@ -5,7 +5,7 @@ export default function ContactSection() {
   const { t } = useLanguage();
 
   return (
-    <div className="border rounded-xl p-10 relative">
+    <div className="border rounded-xl px-10 pb-10 pt-14 relative">
       <div className="absolute -top-4 border border-link/40 bg-link/10 z-10 rounded-xl px-4 py-1 left-1/2 -translate-x-1/2">
         <span className="text-link text-sm font-medium">{t.sections.contact.label}</span>
       </div>

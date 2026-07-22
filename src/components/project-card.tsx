@@ -70,7 +70,7 @@ export function ProjectCard({
           : undefined
       }
       className={cn(
-        "flex flex-col h-full border border-border rounded-xl overflow-hidden hover:ring-2 cursor-pointer hover:ring-link/50 transition-all duration-200 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-link",
+        "group flex flex-col h-full border border-border rounded-xl overflow-hidden hover:ring-2 cursor-pointer hover:ring-link/50 transition-all duration-200 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-link",
         className
       )}
     >
@@ -118,7 +118,7 @@ export function ProjectCard({
             <time className="text-xs text-muted-foreground">{dates}</time>
           </div>
           <ArrowUpRight
-            className="h-4 w-4 text-muted-foreground shrink-0"
+            className="h-4 w-4 text-link shrink-0 opacity-0 -translate-x-2 group-hover:opacity-100 group-hover:translate-x-0 transition-all duration-200"
             aria-hidden
           />
         </div>
