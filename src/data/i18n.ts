@@ -6,8 +6,7 @@ export const i18n = {
     theme: { light: "Claro", dark: "Oscuro" },
     hero: {
       greeting: (firstName: string) => `Hola, soy ${firstName}`,
-      description:
-        "Estudiante de Ciberseguridad en ENTI-UB, con interés en la seguridad defensiva y el análisis de amenazas.",
+      description: "Estudiante de Ciberseguridad en ENTI-UB",
       terminal: {
         whoami: "whoami",
         whoamiOutput: "jordi.gomez",
@@ -78,8 +77,7 @@ export const i18n = {
     theme: { light: "Light", dark: "Dark" },
     hero: {
       greeting: (firstName: string) => `Hi, I'm ${firstName}`,
-      description:
-        "Cybersecurity student at ENTI-UB, interested in defensive security and threat analysis.",
+      description: "Cybersecurity student at ENTI-UB",
       terminal: {
         whoami: "whoami",
         whoamiOutput: "jordi.gomez",

@@ -21,8 +21,10 @@ export function Terminal({ children, className }: TerminalProps) {
         <div className="h-2.5 w-2.5 rounded-full bg-yellow-500" />
         <div className="h-2.5 w-2.5 rounded-full bg-green-500" />
       </div>
-      <pre className="p-4">
-        <code className="grid gap-y-1.5 overflow-auto">{children}</code>
+      <pre className="p-4 overflow-x-hidden">
+        <code className="grid gap-y-1.5 whitespace-pre-wrap break-words">
+          {children}
+        </code>
       </pre>
     </div>
   );
@@ -67,7 +69,7 @@ export function TypingAnimation({
   return (
     <motion.span
       ref={elementRef}
-      className={cn("text-sm font-normal tracking-tight", className)}
+      className={cn("text-xs sm:text-sm font-normal tracking-tight", className)}
       {...props}
     >
       {displayedText}
